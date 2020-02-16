@@ -37,6 +37,8 @@
 
 ## systemd服务配置文件
 
+**注意工作目录(WorkingDirectory)，错了程序无法被systemd启动**
+
 /etc/systemd/system/icetracker.service
 
 ```
@@ -48,6 +50,7 @@ Type=simple
 ExecStart=/usr/bin/python3.6 /data/icetracker/server.py
 Restart=on-failure
 RestartSec=20
+WorkingDirectory=/data/icetracker/
 
 [Install]
 WantedBy=multi-user.target
