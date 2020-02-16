@@ -1,0 +1,8 @@
+{
+    "process_list": [
+        "nginx",
+        "mysqld_safe",
+        "mysqld",
+        "httpd"
+    ]
+}
